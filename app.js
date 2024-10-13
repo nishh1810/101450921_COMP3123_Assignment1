@@ -5,7 +5,8 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/3123-assignment1');
+// mongoose.connect('mongodb://localhost:27017/admin');
+mongoose.connect('mongodb+srv://nishitasachdev95:Admin%401121@cluster0.ft341.mongodb.net/');
 
 app.use(bodyParser.json());
 // Define API endpoints
