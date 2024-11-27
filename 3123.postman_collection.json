@@ -7,6 +7,14 @@
 	},
 	"item": [
 		{
+			"name": "Render Login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
 			"name": "user-signup",
 			"request": {
 				"method": "POST",
@@ -79,6 +87,14 @@
 		},
 		{
 			"name": "employee deleted",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Render Employees",
 			"request": {
 				"method": "GET",
 				"header": []
