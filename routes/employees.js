@@ -26,7 +26,20 @@ router.get('/employees', async (req, res) => {
     res.status(400).json({ error: 'Failed to retrieve employees' });
   }
 });
-
+// retrieve by department
+router.get('/employees/department/:department', async (req, res) => {
+  try {
+    const dep = req.params.department;
+    const employee = await Employee.find({ department: dep });
+    if (!employee) {
+      res.status(404).json({ error: 'Employee not found' });
+    } else {
+      res.status(200).json(employee);
+    }
+  } catch (err) {
+    res.status(400).json({ error: 'Failed to retrieve employees' });
+  }
+});
 // Retrieve a single employee by ID
 router.get('/employees/:eid', async (req, res) => {
   try {
