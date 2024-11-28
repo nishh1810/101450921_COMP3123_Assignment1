@@ -30,7 +30,7 @@ router.get('/employees', async (req, res) => {
 router.get('/employees/department/:department', async (req, res) => {
   try {
     const dep = req.params.department;
-    const employee = await Employee.find({ department: dep });
+    const employee = await Employee.find({$or:[{department: dep}, {position: dep}]});
     if (!employee) {
       res.status(404).json({ error: 'Employee not found' });
     } else {
